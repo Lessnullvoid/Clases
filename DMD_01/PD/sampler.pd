@@ -1,0 +1,45 @@
+#N canvas 169 37 920 671 10;
+#X obj 26 -111 openpanel;
+#X obj 26 -142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 26 -52 soundfiler;
+#X msg 26 -81 read -resize \$1 sample1;
+#X floatatom 26 -19 15 0 0 0 - - -;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array sample1 352800 float 2;
+#X coords 0 1 352800 -1 100 100 1;
+#X restore 27 22 graph;
+#X obj 39 337 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 39 365 tabplay~ sample1;
+#X obj 39 389 hip~ 5;
+#X obj 35 421 dac~;
+#X floatatom 38 166 5 0 0 0 - - -;
+#X floatatom 82 205 5 0 0 0 - - -;
+#X obj 38 205 > 200;
+#X obj 65 232 spigot;
+#X floatatom 31 257 5 0 0 0 - - -;
+#X msg 90 280 bang;
+#X obj 68 257 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 90 256 t b;
+#X text 49 -143 << CARGA EL AUDIO;
+#X text 76 164 << conecta arduino;
+#X text 75 338 umbral >>;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 8 0 9 1;
+#X connect 10 0 12 0;
+#X connect 11 0 13 0;
+#X connect 11 0 13 1;
+#X connect 12 0 11 0;
+#X connect 13 0 14 0;
+#X connect 13 0 16 0;
+#X connect 15 0 6 0;
+#X connect 16 0 17 0;
+#X connect 17 0 15 0;
