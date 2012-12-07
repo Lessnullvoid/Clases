@@ -1,5 +1,5 @@
-#N canvas 213 22 1275 752 10;
-#N canvas 431 291 688 345 (subpatch) 0;
+#N canvas 5 22 1275 752 10;
+#N canvas 80 22 688 345 (subpatch) 1;
 #X obj 13 -97 openpanel;
 #X obj 11 5 bng 15 250 50 0 empty empty empty 17 7 0 10 -4032 -1 -1
 ;
@@ -16,9 +16,8 @@
 #X obj 209 108 tabplay~ sample1;
 #X obj 209 132 hip~ 5;
 #X obj 205 164 dac~;
-#X floatatom 83 24 5 0 201 0 - - -;
+#X floatatom 83 24 5 0 300 0 - - -;
 #X floatatom 261 4 5 0 0 0 - - -;
-#X obj 213 -37 > 200;
 #X obj 244 31 spigot;
 #X floatatom 210 56 5 0 0 0 - - -;
 #X msg 269 79 bang;
@@ -36,7 +35,11 @@
 #X obj 412 43 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 435 41 t b;
-#X obj 379 -51 > 300;
+#X msg 261 -20 bang;
+#X obj 246 -96 sig~;
+#X obj 244 -42 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 246 -68 threshold~ 100 0 200 0;
 #X connect 0 0 3 0;
 #X connect 1 0 0 0;
 #X connect 2 0 4 0;
@@ -45,26 +48,28 @@
 #X connect 8 0 9 0;
 #X connect 9 0 10 0;
 #X connect 9 0 10 1;
-#X connect 11 0 13 0;
-#X connect 12 0 14 0;
-#X connect 12 0 14 1;
-#X connect 13 0 12 0;
-#X connect 14 0 15 0;
-#X connect 14 0 17 0;
-#X connect 16 0 7 0;
-#X connect 17 0 18 0;
-#X connect 18 0 16 0;
-#X connect 19 0 11 0;
-#X connect 20 0 8 0;
-#X connect 21 0 20 0;
+#X connect 11 0 28 0;
+#X connect 12 0 13 0;
+#X connect 12 0 13 1;
+#X connect 13 0 14 0;
+#X connect 13 0 16 0;
+#X connect 15 0 7 0;
+#X connect 16 0 17 0;
+#X connect 17 0 15 0;
+#X connect 18 0 11 0;
+#X connect 19 0 8 0;
+#X connect 20 0 19 0;
+#X connect 21 0 22 0;
+#X connect 21 0 22 1;
 #X connect 22 0 23 0;
-#X connect 22 0 23 1;
-#X connect 23 0 24 0;
-#X connect 23 0 26 0;
-#X connect 25 0 21 0;
-#X connect 26 0 27 0;
-#X connect 27 0 25 0;
-#X connect 28 0 22 0;
+#X connect 22 0 25 0;
+#X connect 24 0 20 0;
+#X connect 25 0 26 0;
+#X connect 26 0 24 0;
+#X connect 27 0 12 0;
+#X connect 28 0 30 0;
+#X connect 29 0 27 0;
+#X connect 30 0 29 0;
 #X coords 0 1 100 -1 120 160 1 0 0;
 #X restore -24 -468 graph;
 #X floatatom -24 -486 5 0 0 0 - - -;
@@ -1084,8 +1089,8 @@
 ;
 #X text 235 -305 [POTENCIOMETRO 1] ___________________________________________________________
 ;
-#X obj -24 -505 * 127;
-#X text 24 -481;
+#X obj -24 -520 * 127;
+#X text 24 -481 comment;
 #X connect 1 0 0 0;
 #X connect 3 0 2 0;
 #X connect 5 0 4 0;
@@ -1132,7 +1137,6 @@
 #X connect 48 0 43 0;
 #X connect 48 0 45 0;
 #X connect 48 0 47 0;
-#X connect 53 0 1 0;
 #X connect 53 0 3 0;
 #X connect 53 0 5 0;
 #X connect 53 0 7 0;
