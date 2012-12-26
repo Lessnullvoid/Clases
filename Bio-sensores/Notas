@@ -1,0 +1,6 @@
+Notas para utilizar los códigos. 
+
+En el caso de los programas en pd es necesario utilizar firmata en arduino.
+Se encuentra en Arduino/ examples/ libraries /firmata / standard.
+
+En el caso del sensor galvánico basta con instalar la versión de arduino y correr el ejemplo de processing. 
