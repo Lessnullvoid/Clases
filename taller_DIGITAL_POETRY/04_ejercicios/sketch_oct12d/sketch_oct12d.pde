@@ -14,7 +14,7 @@ fill(0,0,0);
 textAlign(CENTER); 
 pushMatrix(); 
 rotate(PI*i/3); 
-text("S",0,0); 
+text("libre",0,0); 
 popMatrix(); 
 } 
 } 
