@@ -1,4 +1,4 @@
-#N canvas 56 22 1280 752 10;
+#N canvas 17 22 1280 752 10;
 #X declare -lib mrpeach;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array samphold 44100 float 4;
@@ -158,14 +158,14 @@
 #X obj -263 -60 print unpacked;
 #X obj -262 -146 import mrpeach;
 #X obj 67 17 hsl 200 20 0 1 0 0 empty empty crossfade 20 10 1 14 -1
--262144 -262144 0 1;
+-262144 -262144 300 1;
 #X obj 180 68 *~;
 #X obj 96 81 -;
 #X obj 96 146 *~;
 #X obj 255 39 vsl 15 128 0 1 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 191 1;
 #X obj 65 40 vsl 15 128 0 1 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 12509 1;
 #X obj 165 161 +~;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array crossout 2205 float 1;
@@ -481,7 +481,7 @@
 #X floatatom 255 174 5 0 0 0 - - -;
 #X obj 133 215 *~;
 #X obj 149 197 tgl 15 0 empty empty empty 0 -6 0 8 -1 -262144 -262144
-0 1;
+1 1;
 #X obj 196 48 osc~ 220;
 #X text 208 194 see it;
 #X obj 48 250 output~;
@@ -516,7 +516,7 @@
 #X array 29-sequence 9 float 3;
 #A 0 55 145 140 180 170 110 155 205 225;
 #X coords 0 500 9 0 200 100 1;
-#X restore 301 366 graph;
+#X restore 301 365 graph;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array 29-envelope 103 float 1;
 #A 0 0.669998 0.699998 0.709998 0.724997 0.724997 0.724997 0.724997
@@ -533,7 +533,7 @@
 0.615 0.615 0.605 0.595 0.595 0.585 0.585 0.585 0.575001 0.575001 0.575001
 0.575001 0.595;
 #X coords 0 1 102 0 200 100 1;
-#X restore 510 365 graph;
+#X restore 521 365 graph;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array 29-sample 259 float 1;
 #A 0 0.989177 1 0.989177 0.95694 0.903989 0.83147 0.740952 0.634394
@@ -570,7 +570,7 @@
 0.674394 0.674394 0.674394 0.674394 0.674394 0.674394 0.674394 0.674394
 0.674394 0.674394 0.989181;
 #X coords 0 1 258 -1 200 100 1;
-#X restore 505 245 graph;
+#X restore 522 244 graph;
 #N canvas 57 189 609 424 make-tables 0;
 #X msg 109 52 bang;
 #X obj 109 77 t b b;
@@ -824,6 +824,26 @@ then went in and changed it with the mouse afterward.);
 #X connect 29 0 28 0;
 #X connect 30 0 21 0;
 #X restore 153 -135 pd level_control;
+#X obj 685 105 vsl 30 95 0 100 0 0 main-level-ctrl main-level-ctrl-r
+empty 1 -8 0 10 -262144 -1 -1 0 1;
+#X obj 545 105 vsl 20 105 0 1 0 0 1-gain 1-gain-r empty 0 -9 0 10 -262144
+-1 -1 0 0;
+#X obj 565 105 vsl 20 105 0 1 0 0 2-gain 2-gain-r empty 0 -9 0 10 -262144
+-1 -1 0 0;
+#X obj 585 105 vsl 20 105 0 1 0 0 3-gain 3-gain-r empty 0 -9 0 10 -262144
+-1 -1 0 0;
+#X obj 605 105 vsl 20 105 0 1 0 0 4-gain 4-gain-r empty 0 -9 0 10 -262144
+-1 -1 0 0;
+#X obj 625 105 vsl 20 105 0 1 0 0 5-gain 5-gain-r empty 0 -9 0 10 -262144
+-1 -1 0 0;
+#X obj 645 105 vsl 20 105 0 1 0 0 6-gain 6-gain-r empty 0 -9 0 10 -262144
+-1 -1 0 0;
+#X obj 686 104 cnv 8 28 11 empty main-level-cnv-r -inf 1 7 1 9 -104833
+-212929 0;
+#X obj 665 105 vsl 20 105 0 1 0 0 7-gain 7-gain-r empty 0 -9 0 10 -262144
+-1 -1 0 0;
+#X obj 685 203 vsl 30 7 0 100 0 0 main-mute-ctrl main-mute-ctrl-r mute
+3 3 0 9 -262144 -262144 -1 0 1;
 #X connect 2 0 4 1;
 #X connect 3 0 4 0;
 #X connect 4 0 10 0;
