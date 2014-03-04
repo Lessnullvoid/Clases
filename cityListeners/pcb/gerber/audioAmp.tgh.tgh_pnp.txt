@@ -1,0 +1,42 @@
+*Pick And Place List
+*Company=
+*Author=
+*eMail=
+*
+*Project=audioAmp.tgh.tgh
+*Date=10:58:26
+*CreatedBy=Fritzing 0.8.5b.12.16.8b2c
+*
+*
+*Coordinates in mm, always center of component
+*Origin 0/0=Lower left corner of PCB
+*Rotation in degree (0-360, math. pos.)
+*
+*No;Value;Package;X;Y;Rotation;Side;Name
+1;0.1µF;100 mil [THT, electrolytic];32.7731;-5.91308;-90;Bottom;C1
+2;;;39.9557;-18.0278;0;Bottom;TXT3
+3;10µF;100 mil [THT, electrolytic];19.4381;-24.9897;180;Bottom;C3
+4;;;26.8986;-4.9483;0;Bottom;Copper Fill15
+5;;;24.5618;-6.2945;0;Bottom;Copper Fill12
+6;;;31.8262;-22.1695;0;Bottom;Copper Fill1
+7;10;THT;32.7731;-14.8031;-90;Bottom;R1
+8;;;23.241;-16.0989;0;Bottom;Copper Fill5
+9;;;30.5562;-14.7527;0;Bottom;Copper Fill4
+10;;;47.378;-26.2331;0;Bottom;Hole1
+11;;;38.7737;-20.8644;0;Bottom;TXT2
+12;;;39.8396;-22.4746;0;Bottom;TXT2
+13;;;18.6436;-8.7075;0;Bottom;Copper Fill6
+14;;dip08;24.5181;-16.0997;0;Bottom;U1
+15;10k;THT;18.1681;-14.8297;-90;Bottom;R3
+16;;THT;19.7911;-5.17769;-90;Bottom;J1
+17;;;19.93;-0.72332;0;Bottom;TXT1
+18;;4Ucon 08780 [THT];42.3527;-9.70905;180;Bottom;audifonos
+19;;;2.29308;-26.2331;0;Bottom;Hole2
+20;;THT;9.27808;-21.7881;-90;Bottom;Volumen
+21;;;36.6977;-24.4706;0;Bottom;TXT2
+22;;4Ucon 08780 [THT];7.31847;-9.70905;0;Bottom;Entrada
+23;;;2.29308;-2.10309;0;Bottom;Hole4
+24;0.25mF;100 mil [THT, electrolytic];29.5981;-24.9897;180;Bottom;C2
+25;;;35.687;-4.8975;0;Bottom;Copper Fill16
+26;;;47.378;-2.10309;0;Bottom;Hole3
+27;;;24.7904;-14.1685;0;Bottom;Copper Fill17
