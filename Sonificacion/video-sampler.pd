@@ -1,7 +1,7 @@
-#N canvas 66 22 1043 752 10;
+#N canvas 456 22 1043 752 10;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array table21 79872 float 0;
-#X coords 0 1.02 79871 -1.02 400 430 1 0 0;
+#X array table21 2.36285e+06 float 0;
+#X coords 0 1.02 2.36285e+06 -1.02 400 430 1 0 0;
 #X restore 461 -91 graph;
 #X obj 46 393 hip~ 5;
 #X floatatom 12 112 0 0 0 0 - - -;
@@ -56,11 +56,11 @@
 #X floatatom 265 129 5 0 0 0 - - -;
 #X obj 177 6 pix_blob 4;
 #X obj 262 223 vsl 60 128 1 1000 0 0 empty empty empty 0 -9 0 10 -257985
--1 -1 0 1;
+-1 -1 3262 1;
 #X obj 322 223 vsl 60 128 0 200 0 0 empty empty empty 0 -9 0 10 -4034
--1 -1 0 1;
+-1 -1 5886 1;
 #X obj 382 223 vsl 60 128 0 300 0 0 empty empty empty 0 -9 0 10 -4032
--1 -1 0 1;
+-1 -1 2315 1;
 #X obj 263 172 s val1;
 #X obj 262 202 r val1;
 #X obj 313 172 s val2;
@@ -70,7 +70,7 @@
 #X msg 357 -60 destroy;
 #X msg 356 -37 reset;
 #X obj 357 33 gemwin;
-#X obj 371 12 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 371 12 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X msg 356 -83 create;
 #X obj 177 130 square 5;
